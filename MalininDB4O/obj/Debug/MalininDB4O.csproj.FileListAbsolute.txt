@@ -36,3 +36,6 @@ D:\Sharp\GitDb4o\MalininDB4O\bin\Debug\Db4objects.Db4o.Instrumentation.xml
 D:\Sharp\GitDb4o\MalininDB4O\bin\Debug\Db4objects.Db4o.NativeQueries.xml
 D:\Sharp\GitDb4o\MalininDB4O\bin\Debug\log4net.xml
 D:\Sharp\GitDb4o\MalininDB4O\obj\Debug\MalininDB4O.csprojResolveAssemblyReference.cache
+D:\Sharp\GIT\DB4o\MalininDB4O\bin\Debug\MalininDB4O.exe.config
+D:\Sharp\GIT\DB4o\MalininDB4O\obj\Debug\MalininDB4O.exe
+D:\Sharp\GIT\DB4o\MalininDB4O\obj\Debug\MalininDB4O.pdb

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Activation;
-using Db4objects.Db4o.Config;
 using Db4objects.Db4o.TA;
 
 namespace MalininDB4O

@@ -3,20 +3,14 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Config;
 using Db4objects.Db4o.Diagnostic;
-using Db4objects.Db4o.Internal;
-using Db4objects.Db4o.Internal.Diagnostic;
-using Db4objects.Db4o.Internal.Query;
 using Db4objects.Db4o.Linq;
 using Db4objects.Db4o.Query;
 using Db4objects.Db4o.TA;
 using log4net;
 using log4net.Config;
-using Sharpen.Lang;
 
 namespace MalininDB4O
 {
@@ -34,11 +28,13 @@ namespace MalininDB4O
       var pathToDbFile = ConfigurationManager.AppSettings["PathToDBFile"];
       IEmbeddedConfiguration configuration = Db4oEmbedded.NewConfiguration();
 
-      //TODO: remove if FillDatabase. Also remember to delete file.
+      // TODO: remove if FillDatabase. Also remember to delete file.
       configuration.File.ReadOnly = true;
 
-      configuration.Common.Diagnostic.AddListener(new DiagnosticToConsole());
-      configuration.Common.OptimizeNativeQueries = true;
+      // TODO: AddListener if diagnostic info is needed. 
+      //configuration.Common.Diagnostic.AddListener(new DiagnosticToConsole());
+
+      configuration.Common.OptimizeNativeQueries = false;
 
       // Turn on transparent activation.
       configuration.Common.Add(new TransparentActivationSupport());
@@ -53,7 +49,7 @@ namespace MalininDB4O
       configuration.Common.ObjectClass(typeof(Exposition)).ObjectField("timeFrames").Indexed(false);
       configuration.Common.ObjectClass(typeof(Gallery)).ObjectField("expositions").Indexed(false);
 
-      configuration.Common.ObjectClass(typeof(Artist)).CallConstructor(true);
+      //configuration.Common.ObjectClass(typeof(Artist)).CallConstructor(true);
       configuration.Common.Queries.EvaluationMode(QueryEvaluationMode.Lazy);
 
       IObjectContainer db = Db4oEmbedded.OpenFile(configuration, pathToDbFile);
@@ -62,14 +58,19 @@ namespace MalininDB4O
         //FillDatabase(db);
         ShowAllPaintings(db);
         PaintingsByArtist(db, new Artist("Artist1"));
-        DaysOfPaintingInGallery(db, new Painting("Painting1_1", new Artist("Artist1")), new Gallery("Gallery1"));
-        //AmountOfPaintingsInGalleryDuringTimeFrame(db, new Gallery("Gallery3"), new DateTime(2000, 04, 10), new DateTime(2000, 04, 12));
-        //MainArtists(db);
-        //AllPaintingsByGalleryMainArtistsInGalleryDuringTimeFrame(db, new Gallery("Gallery1"), new DateTime(2000, 04, 3), new DateTime(2000, 04, 4));
-        //AllGalleriesByArtist(db, new Artist("Artist3"));
-        //AllArtistsWithAtLeast10PaintingsDuringTimePeriodInGallery(db, new Gallery("Gallery1"), new DateTime(2000, 04, 10), new DateTime(2000, 04, 12));
-        //GalleriesWithPaintingsOfArtistDuringTimeframe(db, new Artist("Artist5"), new DateTime(2000, 04, 3), new DateTime(2000, 04, 4));
-        //ArtistsWithPaintingsFromVariousGalleries(db);
+        DaysOfPaintingInGallery(db, new Painting("Painting1_1", new Artist("Artist1")),
+          new Gallery("Gallery1"));
+        AmountOfPaintingsInGalleryDuringTimeFrame(db, new Gallery("Gallery3"),
+          new DateTime(2000, 04, 10), new DateTime(2000, 04, 12));
+        MainArtists(db);
+        AllPaintingsByGalleryMainArtistsInGalleryDuringTimeFrame(db,
+          new Gallery("Gallery1"), new DateTime(2000, 04, 3), new DateTime(2000, 04, 4));
+        AllGalleriesByArtist(db, new Artist("Artist3"));
+        AllArtistsWithAtLeast10PaintingsDuringTimePeriodInGallery(db,
+          new Gallery("Gallery1"), new DateTime(2000, 04, 10), new DateTime(2000, 04, 12));
+        GalleriesWithPaintingsOfArtistDuringTimeframe(db, new Artist("Artist5"),
+          new DateTime(2000, 04, 3), new DateTime(2000, 04, 4));
+        ArtistsWithPaintingsFromVariousGalleries(db);
       }
       finally
       {
@@ -257,7 +258,7 @@ namespace MalininDB4O
                           days + " days.");
       log.InfoFormat("Time elapsed: {0}", stopwatch.Elapsed);
 
-      log.Info("********************************************************************");
+      log.Info("*************************TESTING OF NATIVE QUERY OPTIMIZER WORK************************************");
       stopwatch = new Stopwatch();
       stopwatch.Start();
       gallery = new Gallery("Gallery4");
@@ -321,7 +322,7 @@ namespace MalininDB4O
     }
 
     /// <summary>
-    /// 1.5. Самые известные художники у всех галерей.
+    /// 1.5. Вывести список самых известных художников для каждой галереи.
     /// SODA
     /// </summary>
     public static void MainArtists(IObjectContainer db)
@@ -365,12 +366,10 @@ namespace MalininDB4O
       IList<Exposition> expositions = db.Query<Exposition>(
         exposition =>
           exposition.Gallery.Equals(gallery) &&
-          exposition.TimeFrames.Any(timeframe=> timeframe.StartDate< startDate && timeframe.EndDate >endDate)
-          //exposition.TimeFrames.Count(
-          //  timeFrame =>
-          //    timeFrame.ContainDates(new Exposition.TimeFrame(startDate, endDate))) != 0
-          && 
+          exposition.TimeFrames.Any(
+            timeframe => timeframe.StartDate < startDate && timeframe.EndDate > endDate) &&
           exposition.Gallery.MainArtists.Contains(exposition.Painting.Artist));
+
       stopwatch.Stop();
       log.Info("Paintings of main artists of gallery " + gallery + " :");
       foreach (Exposition exposition in expositions)

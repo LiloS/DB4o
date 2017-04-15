@@ -1,0 +1,141 @@
+********************************************************************
+All paintings:
+Painting: title 'Painting1_0', Artist: 'Artist0'
+Painting: title 'Painting4_0', Artist: 'Artist0'
+Painting: title 'Painting5_0', Artist: 'Artist0'
+Painting: title 'Painting0_1', Artist: 'Artist1'
+Painting: title 'Painting1_1', Artist: 'Artist1'
+Painting: title 'Painting4_1', Artist: 'Artist1'
+Painting: title 'Painting5_1', Artist: 'Artist1'
+Painting: title 'Painting6_1', Artist: 'Artist1'
+Painting: title 'Painting0_2', Artist: 'Artist2'
+Painting: title 'Painting1_2', Artist: 'Artist2'
+Painting: title 'Painting2_2', Artist: 'Artist2'
+Painting: title 'Painting3_2', Artist: 'Artist2'
+Painting: title 'Painting5_2', Artist: 'Artist2'
+Painting: title 'Painting7_2', Artist: 'Artist2'
+Painting: title 'Painting1_3', Artist: 'Artist3'
+Painting: title 'Painting6_3', Artist: 'Artist3'
+Painting: title 'Painting0_4', Artist: 'Artist4'
+Painting: title 'Painting3_4', Artist: 'Artist4'
+Painting: title 'Painting4_4', Artist: 'Artist4'
+Painting: title 'Painting0_5', Artist: 'Artist5'
+Painting: title 'Painting1_5', Artist: 'Artist5'
+Painting: title 'Painting2_5', Artist: 'Artist5'
+Painting: title 'Painting3_5', Artist: 'Artist5'
+Painting: title 'Painting4_5', Artist: 'Artist5'
+Painting: title 'Painting0_6', Artist: 'Artist6'
+Painting: title 'Painting2_6', Artist: 'Artist6'
+Painting: title 'Painting3_6', Artist: 'Artist6'
+Painting: title 'Painting4_6', Artist: 'Artist6'
+Painting: title 'Painting1_7', Artist: 'Artist7'
+Painting: title 'Painting2_7', Artist: 'Artist7'
+Painting: title 'Painting4_7', Artist: 'Artist7'
+Painting: title 'Painting5_7', Artist: 'Artist7'
+Painting: title 'Painting8_7', Artist: 'Artist7'
+Painting: title 'Painting0_8', Artist: 'Artist8'
+Painting: title 'Painting1_8', Artist: 'Artist8'
+Painting: title 'Painting3_8', Artist: 'Artist8'
+Painting: title 'Painting7_8', Artist: 'Artist8'
+Painting: title 'Painting0_9', Artist: 'Artist9'
+Painting: title 'Painting6_0', Artist: 'Artist0'
+Painting: title 'Painting3_1', Artist: 'Artist1'
+Painting: title 'Painting4_2', Artist: 'Artist2'
+Painting: title 'Painting6_2', Artist: 'Artist2'
+Painting: title 'Painting2_3', Artist: 'Artist3'
+Painting: title 'Painting4_3', Artist: 'Artist3'
+Painting: title 'Painting5_3', Artist: 'Artist3'
+Painting: title 'Painting7_3', Artist: 'Artist3'
+Painting: title 'Painting1_4', Artist: 'Artist4'
+Painting: title 'Painting5_5', Artist: 'Artist5'
+Painting: title 'Painting1_6', Artist: 'Artist6'
+Painting: title 'Painting5_6', Artist: 'Artist6'
+Painting: title 'Painting7_6', Artist: 'Artist6'
+Painting: title 'Painting6_7', Artist: 'Artist7'
+Painting: title 'Painting2_8', Artist: 'Artist8'
+Painting: title 'Painting5_8', Artist: 'Artist8'
+Painting: title 'Painting6_8', Artist: 'Artist8'
+Painting: title 'Painting1_9', Artist: 'Artist9'
+Painting: title 'Painting0', 
+Painting: title 'Painting2', 
+Painting: title 'Painting3', 
+Painting: title 'Painting2_0', Artist: 'Artist0'
+Painting: title 'Painting7_0', Artist: 'Artist0'
+Painting: title 'Painting8_0', Artist: 'Artist0'
+Painting: title 'Painting2_1', Artist: 'Artist1'
+Painting: title 'Painting8_6', Artist: 'Artist6'
+Painting: title 'Painting4_8', Artist: 'Artist8'
+Painting: title 'Painting3_0', Artist: 'Artist0'
+Painting: title 'Painting7_7', Artist: 'Artist7'
+Painting: title 'Painting0_0', Artist: 'Artist0'
+Painting: title 'Painting0_3', Artist: 'Artist3'
+Painting: title 'Painting3_3', Artist: 'Artist3'
+Painting: title 'Painting2_4', Artist: 'Artist4'
+Painting: title 'Painting6_6', Artist: 'Artist6'
+Painting: title 'Painting0_7', Artist: 'Artist7'
+Painting: title 'Painting4', 
+Painting: title 'Painting3_7', Artist: 'Artist7'
+Painting: title 'Painting1', 
+Time elapsed: 00:00:00.0118589
+********************************************************************
+All paintings of Artist: 'Artist1':
+Painting: title 'Painting0_1', Artist: 'Artist1'
+Painting: title 'Painting1_1', Artist: 'Artist1'
+Painting: title 'Painting4_1', Artist: 'Artist1'
+Painting: title 'Painting5_1', Artist: 'Artist1'
+Painting: title 'Painting6_1', Artist: 'Artist1'
+Painting: title 'Painting3_1', Artist: 'Artist1'
+Painting: title 'Painting2_1', Artist: 'Artist1'
+Time elapsed: 00:00:00.0402202
+********************************************************************
+Painting Painting: title 'Painting1_1', Artist: 'Artist1' was in gallery Gallery: 'Gallery1' for 39 days.
+Time elapsed: 00:00:04.2104859
+********************************************************************
+33 paintings was in gallery Gallery: 'Gallery3' since 4/10/2000 12:00:00 AM to 4/12/2000 12:00:00 AM
+Time elapsed: 00:00:00.0212291
+********************************************************************
+Main artists of gallery Gallery: 'Gallery1'
+Artist: 'Artist1'
+Artist: 'Artist2'
+Main artists of gallery Gallery: 'Gallery2'
+Artist: 'Artist2'
+Artist: 'Artist3'
+Main artists of gallery Gallery: 'Gallery3'
+Artist: 'Artist3'
+Main artists of gallery Gallery: 'Gallery4'
+Artist: 'Artist2'
+Time elapsed: 00:00:00.0008291
+********************************************************************
+Paintings of main artists of gallery Gallery: 'Gallery2' :
+Painting: title 'Painting4_2', Artist: 'Artist2'
+Painting: title 'Painting7_3', Artist: 'Artist3'
+Time elapsed: 00:00:00.2763854
+********************************************************************
+Artist: 'Artist3' paintings was in 
+Gallery: 'Gallery1' days :28
+Gallery: 'Gallery2' days :145
+Gallery: 'Gallery3' days :97
+Gallery: 'Gallery4' days :116
+Gallery: 'Gallery5' days :37
+Gallery: 'Gallery6' days :310
+Time elapsed: 00:00:00.9762519
+********************************************************************
+Artists with minimum amount of paintings = 10 in gallery Gallery: 'Gallery1' from 4/10/2000 12:00:00 AM to 4/12/2000 12:00:00 AM
+Artist: 'Artist2', 
+Artist: 'Artist3', 
+Artist: 'Artist6', 
+Time elapsed: 00:00:00.0259077
+********************************************************************
+Galleries with max amouunt of paintings of artist Artist: 'Artist3' from 4/10/2000 12:00:00 AM to 4/12/2000 12:00:00 AM
+Gallery: 'Gallery5'
+Gallery: 'Gallery6'
+Time elapsed: 00:00:00.0281447
+********************************************************************
+Artists whose paintings were in various galleries: 
+Artist: 'Artist0'
+Artist: 'Artist1'
+Artist: 'Artist2'
+Artist: 'Artist3'
+Artist: 'Artist4'
+Time elapsed: 00:00:00.0002695
+Press any key to continue...

@@ -17,7 +17,7 @@ namespace MalininDB4O
   class Program
   {
     /// <summary>
-    /// Logger.
+    /// Logger Updated.
     /// </summary>
     private static readonly ILog log = LogManager.GetLogger("Main");
 

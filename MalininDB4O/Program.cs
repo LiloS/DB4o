@@ -522,7 +522,7 @@ namespace MalininDB4O
         log.Info(result.Key);
       }
 
-      log.InfoFormat("Time elapsed: {0}", stopwatch.Elapsed);
+      log.InfoFormat("Time elapsed: {0}.", stopwatch.Elapsed);
     }
   }
 }

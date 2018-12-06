@@ -17,7 +17,7 @@ namespace MalininDB4O
     {
       if (string.IsNullOrEmpty(title))
       {
-        throw new ArgumentNullException("title");
+        throw new ArgumentNullException(nameof(title));
       }
 
       this.title = title;
@@ -25,28 +25,18 @@ namespace MalininDB4O
 
     public Painting(Artist artist)
     {
-      if (artist == null)
-      {
-        throw new ArgumentNullException("artist");
-      }
-
-      this.artist = artist;
+        this.artist = artist ?? throw new ArgumentNullException(nameof(artist));
     }
 
     public Painting(string title, Artist artist)
     {
       if (string.IsNullOrEmpty(title))
       {
-        throw new ArgumentNullException("title");
-      }
-
-      if (artist == null)
-      {
-        throw new ArgumentNullException("artist");
+        throw new ArgumentNullException(nameof(title));
       }
 
       this.title = title;
-      this.artist = artist;
+      this.artist = artist ?? throw new ArgumentNullException(nameof(artist));
     }
 
     public string Title
@@ -76,10 +66,6 @@ namespace MalininDB4O
     public override bool Equals(object obj)
     {
       Activate(ActivationPurpose.Read);
-      if (obj == null)
-      {
-        return false;
-      }
 
       var item = obj as Painting;
 
@@ -111,10 +97,7 @@ namespace MalininDB4O
 
     public void Activate(ActivationPurpose purpose)
     {
-      if (activator != null)
-      {
-        activator.Activate(purpose);
-      }
+        activator?.Activate(purpose);
     }
   }
 }

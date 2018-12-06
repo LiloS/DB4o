@@ -19,7 +19,7 @@ namespace MalininDB4O
     {
       if (string.IsNullOrEmpty(name))
       {
-        throw new ArgumentNullException("name");
+        throw new ArgumentNullException(nameof(name));
       }
 
       this.name = name;
@@ -37,16 +37,12 @@ namespace MalininDB4O
     public override string ToString()
     {
       Activate(ActivationPurpose.Read);
-      return string.Format("Artist: '{0}'", name);
+      return $"Artist: '{name}'";
     }
 
     public override bool Equals(object obj)
     {
       Activate(ActivationPurpose.Read);
-      if (obj == null)
-      {
-        return false;
-      }
 
       var item = obj as Artist;
 
@@ -78,10 +74,7 @@ namespace MalininDB4O
 
     public void Activate(ActivationPurpose purpose)
     {
-      if (activator != null)
-      {
-        activator.Activate(purpose);
-      }
+        activator?.Activate(purpose);
     }
   }
 }

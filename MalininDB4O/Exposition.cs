@@ -70,10 +70,7 @@ namespace MalininDB4O
 
     public void Activate(ActivationPurpose purpose)
     {
-      if (activator != null)
-      {
-        activator.Activate(purpose);
-      }
+        activator?.Activate(purpose);
     }
 
     public class TimeFrame : IActivatable
@@ -180,10 +177,7 @@ namespace MalininDB4O
 
       public void Activate(ActivationPurpose purpose)
       {
-        if (activator != null)
-        {
-          activator.Activate(purpose);
-        }
+          activator?.Activate(purpose);
       }
     }
   }

@@ -23,7 +23,7 @@ namespace MalininDB4O
     {
       if (string.IsNullOrEmpty(name))
       {
-        throw new ArgumentNullException("name");
+        throw new ArgumentNullException(nameof(name));
       }
 
       this.name = name;
@@ -33,15 +33,11 @@ namespace MalininDB4O
     {
       if (string.IsNullOrEmpty(name))
       {
-        throw new ArgumentNullException("name");
-      }
-      if (mainArtists == null)
-      {
-        throw new ArgumentNullException("mainArtist");
+        throw new ArgumentNullException(nameof(name));
       }
 
       this.name = name;
-      this.mainArtists = mainArtists;
+      this.mainArtists = mainArtists ?? throw new ArgumentNullException("mainArtist");
     }
 
     public string Name
@@ -132,10 +128,7 @@ namespace MalininDB4O
 
     public void Activate(ActivationPurpose purpose)
     {
-      if (activator != null)
-      {
-        activator.Activate(purpose);
-      }
+        activator?.Activate(purpose);
     }
 
   }

@@ -484,7 +484,7 @@ namespace MalininDB4O
       
       stopwatch.Stop();
 
-      log.Info("Galleries with max amouunt of paintings of artist "+artist+" from "+startDate+" to "+ endDate);
+      log.Info("Galleries with max amount of paintings of artist "+artist+" from "+startDate+" to "+ endDate);
 
       foreach (var result in results)
       {
